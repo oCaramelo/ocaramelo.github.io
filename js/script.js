@@ -147,7 +147,8 @@
   const joke = document.getElementById('xorgentic-joke');
   if (!btn || !joke) return;
 
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
     const open = joke.hasAttribute('hidden');
     if (open) joke.removeAttribute('hidden'); else joke.setAttribute('hidden', '');
     btn.setAttribute('aria-expanded', String(open));
