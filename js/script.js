@@ -140,3 +140,16 @@
   overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
 })();
+
+// xorgentic is a private repo -- clicking it explains why instead of 404ing.
+(function xorgenticJoke() {
+  const btn = document.getElementById('xorgentic-btn');
+  const joke = document.getElementById('xorgentic-joke');
+  if (!btn || !joke) return;
+
+  btn.addEventListener('click', () => {
+    const open = joke.hasAttribute('hidden');
+    if (open) joke.removeAttribute('hidden'); else joke.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+})();
