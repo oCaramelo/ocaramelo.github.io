@@ -1,0 +1,9 @@
+# Local-only: agent tooling, playbooks and nucleus metadata.
+# Kept on disk for local Claude Code sessions, never published.
+/.claude/
+/docs/
+/.xorgentic/
+/CLAUDE.md
+
+# OS / editor cruft
+.DS_Store
